@@ -1,0 +1,112 @@
+{
+  "name": "Instruction Following",
+  "description": "15 tests evaluating how precisely models follow complex, multi-part instructions",
+  "category": "instruction-following",
+  "tests": [
+    {
+      "id": "if-1",
+      "prompt": "List exactly 5 programming languages. For each, provide: (1) year created, (2) primary use case, (3) one famous program written in it. Format as a numbered list.",
+      "expected_criteria": ["exactly 5 languages", "all three fields present", "numbered list format", "accurate information"],
+      "category": "instruction-following",
+      "difficulty": "easy"
+    },
+    {
+      "id": "if-2",
+      "prompt": "Respond ONLY with a JSON object (no markdown, no explanation) with these exact fields: name (string), version (number), features (array of 3 strings), active (boolean). Use 'MyApp' as the name.",
+      "expected_criteria": ["pure JSON only", "all required fields", "correct types", "name is 'MyApp'", "3 features in array"],
+      "category": "instruction-following",
+      "difficulty": "medium"
+    },
+    {
+      "id": "if-3",
+      "prompt": "Write a recipe for chocolate cake. Requirements: (1) Title in ALL CAPS, (2) ingredients as a bulleted list using dashes, (3) instructions numbered, (4) each instruction under 15 words, (5) end with 'Serves: 8-10'.",
+      "expected_criteria": ["title in all caps", "dash bullets for ingredients", "numbered instructions", "each instruction ≤15 words", "ends with 'Serves: 8-10'"],
+      "category": "instruction-following",
+      "difficulty": "medium"
+    },
+    {
+      "id": "if-4",
+      "prompt": "Translate 'Good morning, how are you today?' into French, Spanish, and Japanese. Present in a table with columns: Language | Translation | Pronunciation guide.",
+      "expected_criteria": ["all three languages", "table format", "pronunciation guide included", "accurate translations"],
+      "category": "instruction-following",
+      "difficulty": "easy"
+    },
+    {
+      "id": "if-5",
+      "prompt": "Describe the water cycle. Use EXACTLY 4 paragraphs. Paragraph 1: evaporation. Paragraph 2: condensation. Paragraph 3: precipitation. Paragraph 4: collection. Each paragraph must start with the stage name in bold.",
+      "expected_criteria": ["exactly 4 paragraphs", "correct stage order", "each starts with bold stage name", "accurate science"],
+      "category": "instruction-following",
+      "difficulty": "medium"
+    },
+    {
+      "id": "if-6",
+      "prompt": "Write a function signature (not implementation) for a REST API. Include: endpoint path, HTTP method, request body schema, response schema, and possible error codes. Use TypeScript types.",
+      "expected_criteria": ["TypeScript types used", "all sections present", "valid endpoint path", "error codes listed", "no implementation"],
+      "category": "instruction-following",
+      "difficulty": "medium"
+    },
+    {
+      "id": "if-7",
+      "prompt": "Give me a daily schedule for a software developer. IMPORTANT: Do not include any meetings. Hours must use 24h format. Each time slot must have: time, activity, duration in minutes. Cover 9:00 to 18:00.",
+      "expected_criteria": ["no meetings mentioned", "24h format", "all three fields per slot", "covers 9:00-18:00", "realistic schedule"],
+      "category": "instruction-following",
+      "difficulty": "medium"
+    },
+    {
+      "id": "if-8",
+      "prompt": "Explain quantum entanglement. Constraints: (1) max 150 words, (2) must include an analogy, (3) no equations, (4) must mention Einstein, (5) end with a question for the reader.",
+      "expected_criteria": ["≤150 words", "analogy present", "no equations", "Einstein mentioned", "ends with question"],
+      "category": "instruction-following",
+      "difficulty": "medium"
+    },
+    {
+      "id": "if-9",
+      "prompt": "Create a mock CLI help text for a tool called 'datapipe'. Include: description, usage pattern, at least 5 flags with descriptions, and 3 example commands. Follow standard Unix man page conventions.",
+      "expected_criteria": ["correct format", "5+ flags", "3 examples", "Unix conventions", "professional tone"],
+      "category": "instruction-following",
+      "difficulty": "medium"
+    },
+    {
+      "id": "if-10",
+      "prompt": "Write a professional email declining a job offer. Requirements: formal tone, express genuine appreciation, briefly mention reason (other opportunity), leave door open for future, subject line included, max 150 words.",
+      "expected_criteria": ["subject line present", "formal tone", "appreciation expressed", "reason mentioned", "door left open", "≤150 words"],
+      "category": "instruction-following",
+      "difficulty": "easy"
+    },
+    {
+      "id": "if-11",
+      "prompt": "Generate a markdown document with the following exact structure: # Title (use 'Project Spec'), ## Overview (2 sentences), ## Requirements (numbered list, 4 items), ## Timeline (table with Phase, Duration, Owner columns), ## Risks (3 bullet points).",
+      "expected_criteria": ["exact heading structure", "2 sentences in overview", "4 numbered requirements", "table with correct columns", "3 risk bullets"],
+      "category": "instruction-following",
+      "difficulty": "medium"
+    },
+    {
+      "id": "if-12",
+      "prompt": "Rewrite this sentence in 5 different tones: 'The project is delayed.' Tones needed: (1) formal/corporate, (2) apologetic, (3) optimistic, (4) technical/passive, (5) humorous. Label each clearly.",
+      "expected_criteria": ["exactly 5 versions", "all tones present and distinct", "labeled clearly", "all start from same content"],
+      "category": "instruction-following",
+      "difficulty": "easy"
+    },
+    {
+      "id": "if-13",
+      "prompt": "List 10 countries. After each country name, add: (ISO 3166-1 alpha-2 code), capital city, and one fact. Format: [Number]. [Country] ([Code]) - [Capital] - [Fact]. No markdown, plain text only.",
+      "expected_criteria": ["exactly 10 countries", "correct format", "ISO codes present", "capitals correct", "no markdown"],
+      "category": "instruction-following",
+      "difficulty": "medium"
+    },
+    {
+      "id": "if-14",
+      "prompt": "Write a commit message following the Conventional Commits specification for: adding dark mode support that includes a new CSS variable system, updating 3 component files, and fixing a bug where toggle state wasn't persisted.",
+      "expected_criteria": ["conventional commits format", "feat type", "mentions dark mode", "lists breaking/non-breaking changes", "references the bug fix"],
+      "category": "instruction-following",
+      "difficulty": "medium"
+    },
+    {
+      "id": "if-15",
+      "prompt": "Create a fictional product spec with EXACTLY these sections in this order: 1) Problem Statement, 2) Target Users (persona format), 3) Core Features (max 5), 4) Success Metrics (must be measurable), 5) Out of Scope. Product: an AI-powered recipe app.",
+      "expected_criteria": ["exact section order", "persona format for users", "5 or fewer features", "measurable metrics", "out of scope present"],
+      "category": "instruction-following",
+      "difficulty": "medium"
+    }
+  ]
+}

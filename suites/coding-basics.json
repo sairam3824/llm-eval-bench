@@ -1,0 +1,147 @@
+{
+  "name": "Coding Basics",
+  "description": "20 fundamental programming tasks covering algorithms, data structures, and code quality",
+  "category": "coding",
+  "tests": [
+    {
+      "id": "code-1",
+      "prompt": "Write a Python function to check if a number is prime. Include edge cases for 0, 1, and negative numbers.",
+      "expected_criteria": ["correct output", "handles edge cases", "clean code", "efficient algorithm"],
+      "category": "coding",
+      "difficulty": "easy"
+    },
+    {
+      "id": "code-2",
+      "prompt": "Implement a binary search function in JavaScript that returns the index of the target element or -1 if not found.",
+      "expected_criteria": ["correct binary search", "handles empty array", "returns correct index", "O(log n) complexity"],
+      "category": "coding",
+      "difficulty": "easy"
+    },
+    {
+      "id": "code-3",
+      "prompt": "Write a Python class for a Stack data structure with push, pop, peek, and is_empty methods.",
+      "expected_criteria": ["correct implementation", "proper encapsulation", "handles empty stack", "docstrings"],
+      "category": "coding",
+      "difficulty": "easy"
+    },
+    {
+      "id": "code-4",
+      "prompt": "Implement merge sort in Python with clear comments explaining each step.",
+      "expected_criteria": ["correct sorting", "divide and conquer approach", "O(n log n) complexity", "comments"],
+      "category": "coding",
+      "difficulty": "medium"
+    },
+    {
+      "id": "code-5",
+      "prompt": "Write a function to detect if a linked list has a cycle using Floyd's algorithm (Python).",
+      "expected_criteria": ["correct cycle detection", "Floyd's algorithm", "O(1) space", "handles null"],
+      "category": "coding",
+      "difficulty": "medium"
+    },
+    {
+      "id": "code-6",
+      "prompt": "Create a Python decorator that measures and prints execution time of any function.",
+      "expected_criteria": ["decorator pattern", "preserves function signature", "accurate timing", "functools.wraps"],
+      "category": "coding",
+      "difficulty": "medium"
+    },
+    {
+      "id": "code-7",
+      "prompt": "Write a TypeScript generic function that deep-clones any object, handling nested objects and arrays.",
+      "expected_criteria": ["handles nested structures", "generic types", "handles edge cases", "no external libs"],
+      "category": "coding",
+      "difficulty": "medium"
+    },
+    {
+      "id": "code-8",
+      "prompt": "Implement a simple LRU cache in Python with get and put operations, O(1) complexity.",
+      "expected_criteria": ["O(1) operations", "correct eviction", "handles capacity", "uses OrderedDict or doubly linked list"],
+      "category": "coding",
+      "difficulty": "hard"
+    },
+    {
+      "id": "code-9",
+      "prompt": "Write a regex pattern to validate email addresses, then wrap it in a Python validation function.",
+      "expected_criteria": ["valid regex", "handles edge cases", "returns boolean", "explains the pattern"],
+      "category": "coding",
+      "difficulty": "easy"
+    },
+    {
+      "id": "code-10",
+      "prompt": "Implement a thread-safe queue in Python using threading primitives.",
+      "expected_criteria": ["thread safety", "blocking operations", "proper locking", "no race conditions"],
+      "category": "coding",
+      "difficulty": "hard"
+    },
+    {
+      "id": "code-11",
+      "prompt": "Write a Python async function that fetches multiple URLs concurrently using aiohttp and returns all responses.",
+      "expected_criteria": ["async/await syntax", "concurrent execution", "error handling", "asyncio.gather"],
+      "category": "coding",
+      "difficulty": "medium"
+    },
+    {
+      "id": "code-12",
+      "prompt": "Implement a trie (prefix tree) data structure in Python with insert and search methods.",
+      "expected_criteria": ["correct trie structure", "insert works", "search works", "handles prefixes"],
+      "category": "coding",
+      "difficulty": "hard"
+    },
+    {
+      "id": "code-13",
+      "prompt": "Write a SQL query to find the top 3 departments by average salary, including department name from a joined table.",
+      "expected_criteria": ["correct JOIN", "AVG aggregation", "GROUP BY", "ORDER BY", "LIMIT"],
+      "category": "coding",
+      "difficulty": "medium"
+    },
+    {
+      "id": "code-14",
+      "prompt": "Create a Python context manager using __enter__ and __exit__ that measures memory usage of a code block.",
+      "expected_criteria": ["context manager protocol", "memory measurement", "cleanup on exception", "psutil or resource"],
+      "category": "coding",
+      "difficulty": "medium"
+    },
+    {
+      "id": "code-15",
+      "prompt": "Write a JavaScript function using Promise.all to fetch user data and their posts concurrently, then combine results.",
+      "expected_criteria": ["Promise.all", "concurrent fetching", "error handling", "combines results correctly"],
+      "category": "coding",
+      "difficulty": "medium"
+    },
+    {
+      "id": "code-16",
+      "prompt": "Implement quicksort in Rust with in-place sorting. Include a main function to demonstrate it.",
+      "expected_criteria": ["correct quicksort", "Rust ownership", "in-place", "compiles correctly"],
+      "category": "coding",
+      "difficulty": "hard"
+    },
+    {
+      "id": "code-17",
+      "prompt": "Write a Python function to parse a CSV string without using the csv module, handling quoted fields with commas.",
+      "expected_criteria": ["handles quoted fields", "handles commas in quotes", "returns list of lists", "edge cases"],
+      "category": "coding",
+      "difficulty": "medium"
+    },
+    {
+      "id": "code-18",
+      "prompt": "Create a debounce function in JavaScript/TypeScript that delays function execution and cancels previous calls.",
+      "expected_criteria": ["correct debouncing", "cancel mechanism", "TypeScript types", "handles this binding"],
+      "category": "coding",
+      "difficulty": "medium"
+    },
+    {
+      "id": "code-19",
+      "prompt": "Write a Python script to find all anagram groups in a list of words.",
+      "expected_criteria": ["correct grouping", "efficient solution", "handles empty list", "case handling"],
+      "category": "coding",
+      "difficulty": "easy"
+    },
+    {
+      "id": "code-20",
+      "prompt": "Implement the observer pattern in Python with a generic EventEmitter class that supports on, off, and emit.",
+      "expected_criteria": ["observer pattern", "multiple listeners", "remove listener works", "async support"],
+      "category": "coding",
+      "difficulty": "medium"
+    }
+  ]
+}

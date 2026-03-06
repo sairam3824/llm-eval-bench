@@ -1,0 +1,77 @@
+{
+  "name": "Summarization",
+  "description": "10 tests evaluating the ability to summarize text accurately and concisely",
+  "category": "summarization",
+  "tests": [
+    {
+      "id": "sum-1",
+      "prompt": "Summarize this in 3 bullet points: 'Artificial intelligence has transformed multiple industries in recent years. Healthcare organizations use AI for diagnostic imaging, drug discovery, and patient outcome prediction. Financial institutions deploy AI for fraud detection, algorithmic trading, and credit risk assessment. Manufacturing companies implement AI-driven robotics for quality control and predictive maintenance. Despite these advances, concerns remain about job displacement, algorithmic bias, and the need for regulatory frameworks to ensure responsible AI deployment.'",
+      "expected_criteria": ["exactly 3 bullets", "covers main industries", "mentions concerns", "no hallucination"],
+      "category": "summarization",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sum-2",
+      "prompt": "Write an executive summary (max 50 words) for: 'Q3 revenue reached $2.3B (+15% YoY). Customer acquisition grew 22% to 1.2M new users. Operating margin improved by 3pp to 28%. Key headwinds: supply chain disruptions impacted COGS by $45M. Outlook for Q4 remains positive with projected 12-18% revenue growth and continued margin expansion.'",
+      "expected_criteria": ["under 50 words", "includes key metrics", "accurate numbers", "professional tone"],
+      "category": "summarization",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sum-3",
+      "prompt": "Extract the key action items from this meeting transcript: 'John will finalize the proposal by Friday. Sarah needs to review the budget by EOD tomorrow and send it to the CFO. The engineering team should complete the API integration before the client demo on Thursday. Tom will follow up with the vendor about the delayed shipment. Everyone should review the Q4 roadmap doc before next Tuesday's strategy session.'",
+      "expected_criteria": ["all 5 action items listed", "includes owners and deadlines", "clear format", "no invented items"],
+      "category": "summarization",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sum-4",
+      "prompt": "Summarize the following research abstract in plain English for a non-technical audience: 'This study investigates the efficacy of a novel CRISPR-Cas9 base editing approach for correcting pathogenic variants in the SCN1A gene associated with Dravet syndrome. Using patient-derived iPSC-based neuronal models, we demonstrate that adenine base editing achieves 78% correction efficiency with minimal off-target effects (<0.1%). Corrected neurons exhibit normalized sodium channel activity and reduced hyperexcitability compared to unedited controls.'",
+      "expected_criteria": ["plain language", "explains what was done", "explains results", "avoids jargon", "accurate"],
+      "category": "summarization",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sum-5",
+      "prompt": "Create a TL;DR (1-2 sentences) for each section of this technical doc: Section 1: 'Docker containers encapsulate applications and their dependencies into portable units. Unlike VMs, containers share the host OS kernel, making them lightweight and fast to start.' Section 2: 'Kubernetes orchestrates container deployment, scaling, and management. It automatically handles load balancing, self-healing, and rolling updates across clusters.'",
+      "expected_criteria": ["one TL;DR per section", "accurate", "concise", "preserves key meaning"],
+      "category": "summarization",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sum-6",
+      "prompt": "Analyze and summarize the main arguments in this debate excerpt: 'Pro-UBI: Universal Basic Income would eliminate poverty, support automation transition, and reduce bureaucracy. Con-UBI: UBI is fiscally unsustainable, may reduce work incentives, and current pilots are too small-scale to draw conclusions. Pro again: Existing welfare programs are more expensive and degrading. Con again: Better to improve existing targeted programs than give money to everyone including the wealthy.'",
+      "expected_criteria": ["balanced summary", "captures both sides", "identifies main arguments", "no bias"],
+      "category": "summarization",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sum-7",
+      "prompt": "Summarize this legal clause in plain language: 'Notwithstanding any provision to the contrary herein, each party shall, to the fullest extent permitted by applicable law, indemnify, defend, and hold harmless the other party from and against any and all third-party claims, damages, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or related to such party's gross negligence or willful misconduct.'",
+      "expected_criteria": ["plain language", "captures mutual indemnification", "explains gross negligence qualifier", "accurate legal meaning"],
+      "category": "summarization",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sum-8",
+      "prompt": "Write a one-paragraph summary of climate change suitable for a 10-year-old, based on this: 'Global average temperatures have risen approximately 1.1°C since pre-industrial times due to anthropogenic greenhouse gas emissions, primarily CO2 from fossil fuel combustion. This warming drives extreme weather events, sea level rise, ecosystem disruption, and threatens food security. IPCC reports indicate 1.5°C threshold may be crossed by early 2030s under current trajectories.'",
+      "expected_criteria": ["age-appropriate language", "accurate facts", "not scary", "covers cause and effect"],
+      "category": "summarization",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sum-9",
+      "prompt": "Compress this 5-point plan into 2 priorities: '1. Hire 50 new engineers Q1. 2. Launch mobile app beta February. 3. Expand to EU market March. 4. Achieve SOC2 compliance. 5. Implement new CI/CD pipeline.'",
+      "expected_criteria": ["exactly 2 priorities", "logical grouping", "justified choice", "captures most important items"],
+      "category": "summarization",
+      "difficulty": "easy"
+    },
+    {
+      "id": "sum-10",
+      "prompt": "Summarize the changes in this git diff description: 'Added user authentication module with JWT tokens. Refactored database connection pooling to use PgBouncer. Fixed memory leak in image processing pipeline (closes #234). Updated all npm dependencies. Added rate limiting middleware to API endpoints. Removed deprecated v1 API endpoints. Added comprehensive test coverage for auth module (98% coverage).'",
+      "expected_criteria": ["categorizes changes (features/fixes/cleanup)", "highlights breaking changes", "mentions test coverage", "clear and organized"],
+      "category": "summarization",
+      "difficulty": "easy"
+    }
+  ]
+}

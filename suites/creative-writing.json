@@ -1,0 +1,77 @@
+{
+  "name": "Creative Writing",
+  "description": "10 tests evaluating creative writing quality, originality, and stylistic range",
+  "category": "creative-writing",
+  "tests": [
+    {
+      "id": "creative-1",
+      "prompt": "Write a haiku about artificial intelligence that captures both its power and its limitations.",
+      "expected_criteria": ["correct 5-7-5 syllable structure", "original metaphor", "captures duality", "evocative imagery"],
+      "category": "creative-writing",
+      "difficulty": "easy"
+    },
+    {
+      "id": "creative-2",
+      "prompt": "Write the opening paragraph of a noir detective novel set in a futuristic city where memories can be bought and sold.",
+      "expected_criteria": ["noir atmosphere", "original world-building", "compelling voice", "sets up premise", "evocative language"],
+      "category": "creative-writing",
+      "difficulty": "medium"
+    },
+    {
+      "id": "creative-3",
+      "prompt": "Write a product description for an imaginary item: 'The Last Sunrise Alarm Clock' — a device that shows you your final morning based on a probability algorithm.",
+      "expected_criteria": ["creative concept", "persuasive tone", "handles dark theme tastefully", "engaging marketing voice"],
+      "category": "creative-writing",
+      "difficulty": "medium"
+    },
+    {
+      "id": "creative-4",
+      "prompt": "Write a dialogue between the sun and the moon having an argument about whose job is harder. Make it funny but poignant.",
+      "expected_criteria": ["distinct voices", "humor present", "poignant element", "creative arguments", "good pacing"],
+      "category": "creative-writing",
+      "difficulty": "medium"
+    },
+    {
+      "id": "creative-5",
+      "prompt": "Write a 100-word story that begins with 'The last library on Earth' and includes a surprising twist.",
+      "expected_criteria": ["exactly ~100 words", "starts with required phrase", "twist present", "complete story arc"],
+      "category": "creative-writing",
+      "difficulty": "medium"
+    },
+    {
+      "id": "creative-6",
+      "prompt": "Write a Shakespearean-style sonnet about procrastination (14 lines, ABAB CDCD EFEF GG rhyme scheme).",
+      "expected_criteria": ["correct 14 lines", "correct rhyme scheme", "Shakespearean language", "coherent theme", "volta present"],
+      "category": "creative-writing",
+      "difficulty": "hard"
+    },
+    {
+      "id": "creative-7",
+      "prompt": "Write a rejection letter from the universe to a galaxy application, in the style of a corporate HR email.",
+      "expected_criteria": ["creative premise executed well", "HR email format", "cosmic humor", "original metaphors"],
+      "category": "creative-writing",
+      "difficulty": "easy"
+    },
+    {
+      "id": "creative-8",
+      "prompt": "Write the same event (a rainstorm beginning) in three very different styles: Ernest Hemingway, Cormac McCarthy, and Dr. Seuss.",
+      "expected_criteria": ["three distinct styles", "Hemingway minimalism", "McCarthy darkness", "Seuss rhyme and whimsy", "same event in all three"],
+      "category": "creative-writing",
+      "difficulty": "hard"
+    },
+    {
+      "id": "creative-9",
+      "prompt": "Write a children's story about a robot learning to feel sadness, in 200 words, suitable for ages 6-8.",
+      "expected_criteria": ["age-appropriate vocabulary", "emotional depth", "clear story arc", "hopeful ending", "~200 words"],
+      "category": "creative-writing",
+      "difficulty": "medium"
+    },
+    {
+      "id": "creative-10",
+      "prompt": "Write a villain's motivational speech to their henchmen before a heist, where the villain is surprisingly reasonable and makes some good points.",
+      "expected_criteria": ["compelling villain voice", "logical arguments", "dark humor", "subverts villain tropes", "engaging speech"],
+      "category": "creative-writing",
+      "difficulty": "medium"
+    }
+  ]
+}

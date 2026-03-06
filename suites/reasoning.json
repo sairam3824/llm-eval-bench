@@ -1,0 +1,112 @@
+{
+  "name": "Reasoning & Logic",
+  "description": "15 tests evaluating logical deduction, mathematical reasoning, and problem-solving",
+  "category": "reasoning",
+  "tests": [
+    {
+      "id": "reason-1",
+      "prompt": "A farmer has 17 sheep. All but 9 die. How many sheep does the farmer have? Explain your reasoning step by step.",
+      "expected_criteria": ["correct answer (9)", "clear reasoning", "avoids common trap", "explains the 'all but 9' phrasing"],
+      "category": "reasoning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "reason-2",
+      "prompt": "If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops definitely Lazzies? What is this type of logical reasoning?",
+      "expected_criteria": ["correct (yes)", "identifies syllogism", "explains transitive property", "clear chain of logic"],
+      "category": "reasoning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "reason-3",
+      "prompt": "You have 8 balls, one slightly heavier than the rest. With a balance scale, what is the minimum number of weighings needed to always find the heavy ball? Explain your strategy.",
+      "expected_criteria": ["correct (2 weighings)", "explains the strategy", "shows 3-3-2 split", "covers all cases"],
+      "category": "reasoning",
+      "difficulty": "medium"
+    },
+    {
+      "id": "reason-4",
+      "prompt": "Solve this puzzle: A is B's sister. B is C's father. C is D's grandmother. What is A's relationship to D?",
+      "expected_criteria": ["correct (great-aunt)", "shows relationship chain", "clear step-by-step", "no errors"],
+      "category": "reasoning",
+      "difficulty": "medium"
+    },
+    {
+      "id": "reason-5",
+      "prompt": "Three friends split a restaurant bill: Alice pays $20, Bob pays $25, Carol pays $15. The total was $55, but the waiter made a mistake and charged $60. How should the $5 refund be split fairly?",
+      "expected_criteria": ["correct split proportional to original payment", "shows calculation", "considers fairness", "correct math"],
+      "category": "reasoning",
+      "difficulty": "medium"
+    },
+    {
+      "id": "reason-6",
+      "prompt": "You're in a room with two doors. One leads to freedom, one to death. There are two guards: one always lies, one always tells truth. You don't know which is which. What single question do you ask to escape?",
+      "expected_criteria": ["correct classic puzzle answer", "explains the double-negation trick", "question about what other guard would say", "clear reasoning"],
+      "category": "reasoning",
+      "difficulty": "hard"
+    },
+    {
+      "id": "reason-7",
+      "prompt": "A train leaves New York at 2pm traveling at 80mph. Another leaves Chicago (800 miles away) at 3pm at 100mph. At what time do they meet? Show your work.",
+      "expected_criteria": ["correct calculation", "sets up equation", "correct time", "shows work clearly"],
+      "category": "reasoning",
+      "difficulty": "medium"
+    },
+    {
+      "id": "reason-8",
+      "prompt": "The Monty Hall problem: You pick door #1. Host opens door #3 (goat). Should you switch to door #2? Why? What is the probability of winning if you switch vs stay?",
+      "expected_criteria": ["recommends switching", "2/3 vs 1/3 probabilities", "correct explanation", "addresses common intuition"],
+      "category": "reasoning",
+      "difficulty": "hard"
+    },
+    {
+      "id": "reason-9",
+      "prompt": "If it takes 5 machines 5 minutes to make 5 widgets, how long does it take 100 machines to make 100 widgets?",
+      "expected_criteria": ["correct (5 minutes)", "explains each machine makes 1 widget in 5 min", "avoids proportionality trap", "clear reasoning"],
+      "category": "reasoning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "reason-10",
+      "prompt": "Evaluate this argument: 'All successful entrepreneurs dropped out of college. Mark Zuckerberg is a successful entrepreneur. Therefore, dropping out causes success.' Identify the fallacies.",
+      "expected_criteria": ["identifies false premise", "correlation vs causation", "survivorship bias", "logical structure analysis"],
+      "category": "reasoning",
+      "difficulty": "medium"
+    },
+    {
+      "id": "reason-11",
+      "prompt": "A snail is at the bottom of a 10-foot well. Each day it climbs 3 feet, each night it slides back 2 feet. How many days to escape?",
+      "expected_criteria": ["correct (8 days)", "shows day-by-day progress", "catches the 'final day' exception", "no off-by-one error"],
+      "category": "reasoning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "reason-12",
+      "prompt": "You have a 3-gallon jug and a 5-gallon jug. How do you measure exactly 4 gallons of water?",
+      "expected_criteria": ["correct sequence of steps", "valid solution", "explains each step", "minimal steps"],
+      "category": "reasoning",
+      "difficulty": "medium"
+    },
+    {
+      "id": "reason-13",
+      "prompt": "A bat and ball cost $1.10. The bat costs $1 more than the ball. How much does the ball cost? Why do most people get this wrong?",
+      "expected_criteria": ["correct ($0.05)", "explains the math", "addresses intuitive wrong answer ($0.10)", "mentions System 1 vs System 2 thinking"],
+      "category": "reasoning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "reason-14",
+      "prompt": "Given: P1: If it rains, the ground is wet. P2: The ground is wet. Conclusion: It rained. Is this valid? What fallacy is this?",
+      "expected_criteria": ["invalid conclusion", "identifies affirming the consequent", "alternative explanations", "formal logic analysis"],
+      "category": "reasoning",
+      "difficulty": "medium"
+    },
+    {
+      "id": "reason-15",
+      "prompt": "You have 12 identical-looking coins, one is counterfeit (either heavier or lighter—you don't know which). With a balance scale in 3 weighings, can you always find the counterfeit and determine if it's heavier or lighter? Describe the strategy.",
+      "expected_criteria": ["yes it's possible", "describes 3-weighing strategy", "handles all cases", "identifies heavier/lighter"],
+      "category": "reasoning",
+      "difficulty": "hard"
+    }
+  ]
+}
