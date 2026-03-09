@@ -2,7 +2,7 @@ import Database from 'better-sqlite3';
 import path from 'path';
 import fs from 'fs';
 
-const DB_PATH = process.env.DATABASE_PATH || './data/bench.db';
+const DB_PATH = (process.env.DATABASE_PATH || './data/bench.db') as string;
 const dbDir = path.dirname(DB_PATH);
 
 if (!fs.existsSync(dbDir)) {
@@ -142,10 +142,10 @@ function seedDefaultModels(db: Database.Database) {
       color: '#6EE7B7',
     },
     {
-      id: 'claude-sonnet-4',
-      name: 'Claude Sonnet 4',
+      id: 'claude-3-5-sonnet',
+      name: 'Claude 3.5 Sonnet',
       provider: 'anthropic',
-      model_id: 'claude-sonnet-4-5',
+      model_id: 'claude-3-5-sonnet-20241022',
       description: 'Anthropic\'s high-performance model',
       context_window: 200000,
       input_price_per_1k: 0.003,
@@ -153,23 +153,23 @@ function seedDefaultModels(db: Database.Database) {
       color: '#F59E0B',
     },
     {
-      id: 'claude-haiku-3-5',
-      name: 'Claude Haiku 3.5',
+      id: 'claude-3-5-haiku',
+      name: 'Claude 3.5 Haiku',
       provider: 'anthropic',
-      model_id: 'claude-haiku-4-5-20251001',
+      model_id: 'claude-3-5-haiku-20241022',
       description: 'Fast, affordable Anthropic model',
       context_window: 200000,
-      input_price_per_1k: 0.001,
-      output_price_per_1k: 0.005,
+      input_price_per_1k: 0.00025,
+      output_price_per_1k: 0.00125,
       color: '#FCD34D',
     },
     {
-      id: 'gemini-2-5-pro',
-      name: 'Gemini 2.5 Pro',
+      id: 'gemini-1-5-pro',
+      name: 'Gemini 1.5 Pro',
       provider: 'google',
-      model_id: 'gemini-2.0-flash-exp',
+      model_id: 'gemini-1.5-pro-latest',
       description: 'Google\'s most capable model',
-      context_window: 1000000,
+      context_window: 2000000,
       input_price_per_1k: 0.00125,
       output_price_per_1k: 0.005,
       color: '#6366F1',
