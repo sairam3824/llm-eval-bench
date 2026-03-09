@@ -2,6 +2,12 @@ export const dynamic = 'force-dynamic';
 
 import { NextResponse } from 'next/server';
 import { getDb } from '@/lib/db';
+import fs from 'fs';
+import path from 'path';
+
+type RunRow = { id: string; suite_name: string; status: string; created_at: string; model_ids: string };
+type ModelMetricRow = { model_name: string; avg_quality: number; avg_latency: number; avg_cost: number; run_count: number };
+type QualityRow = { date: string; model_name: string; quality: number };
 
 export async function GET() {
   const db = getDb();
@@ -9,12 +15,23 @@ export async function GET() {
   const totalRuns = (db.prepare("SELECT COUNT(*) as c FROM benchmark_runs").get() as { c: number }).c;
   const completedRuns = (db.prepare("SELECT COUNT(*) as c FROM benchmark_runs WHERE status = 'completed'").get() as { c: number }).c;
   const totalModels = (db.prepare("SELECT COUNT(*) as c FROM models WHERE enabled = 1").get() as { c: number }).c;
-  const totalSuites = (db.prepare("SELECT COUNT(*) as c FROM suites").get() as { c: number }).c;
+  const dbSuitesCount = (db.prepare("SELECT COUNT(*) as c FROM suites").get() as { c: number }).c;
+
+  // Add built-in suites count
+  let builtinSuitesCount = 0;
+  try {
+    const suitesDir = path.join(process.cwd(), 'suites');
+    if (fs.existsSync(suitesDir)) {
+      builtinSuitesCount = fs.readdirSync(suitesDir).filter((f: string) => f.endsWith('.json')).length;
+    }
+  } catch { }
+
+  const totalSuites = dbSuitesCount + builtinSuitesCount;
 
   const recentRuns = db.prepare(`
     SELECT id, suite_name, status, created_at, model_ids
     FROM benchmark_runs ORDER BY created_at DESC LIMIT 5
-  `).all();
+  `).all() as RunRow[];
 
   const topModels = db.prepare(`
     SELECT model_name, AVG(avg_quality) as avg_quality, AVG(avg_latency_ms) as avg_latency,
@@ -23,7 +40,7 @@ export async function GET() {
     GROUP BY model_name
     ORDER BY avg_quality DESC
     LIMIT 8
-  `).all();
+  `).all() as ModelMetricRow[];
 
   const qualityOverTime = db.prepare(`
     SELECT DATE(r.created_at) as date, m.model_name, AVG(m.avg_quality) as quality
@@ -32,7 +49,7 @@ export async function GET() {
     GROUP BY DATE(r.created_at), m.model_name
     ORDER BY date
     LIMIT 100
-  `).all();
+  `).all() as QualityRow[];
 
   return NextResponse.json({
     stats: { totalRuns, completedRuns, totalModels, totalSuites },
