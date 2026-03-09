@@ -38,10 +38,18 @@ IMPORTANT: Return ONLY valid JSON, no other text.`;
 
   try {
     const result = await callOpenAISync(judgeModel, judgePrompt);
-    const parsed = JSON.parse(result.response.trim());
+    let cleanedLabel = result.response.trim();
+
+    // Remove markdown code blocks if present
+    if (cleanedLabel.includes('```')) {
+      const match = cleanedLabel.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+      if (match) cleanedLabel = match[1];
+    }
+
+    const parsed = JSON.parse(cleanedLabel);
     return {
-      score: Math.min(10, Math.max(1, Number(parsed.score))),
-      reasoning: parsed.reasoning || '',
+      score: Math.min(10, Math.max(1, Number(parsed.score || 5))),
+      reasoning: parsed.reasoning || 'No reasoning provided',
     };
   } catch {
     // Fallback scoring if judge fails
