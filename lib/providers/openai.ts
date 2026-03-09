@@ -4,7 +4,7 @@ let client: OpenAI | null = null;
 
 function getClient(): OpenAI {
   if (!client) {
-    client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    client = new OpenAI({ apiKey: (process.env.OPENAI_API_KEY || '') as string });
   }
   return client;
 }
@@ -31,6 +31,7 @@ export async function callOpenAI(
       messages,
       stream: true,
       max_tokens: 2048,
+      stream_options: { include_usage: true },
     });
 
     for await (const chunk of stream) {
