@@ -1,4 +1,4 @@
-const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || 'http://localhost:11434';
+const OLLAMA_BASE_URL = (process.env.OLLAMA_BASE_URL || 'http://localhost:11434') as string;
 
 export async function callOllama(
   modelId: string,
@@ -32,12 +32,17 @@ export async function callOllama(
     let inputTokens = 0;
     let outputTokens = 0;
 
+    let buffer = '';
     while (true) {
       const { done, value } = await reader.read();
       if (done) break;
 
-      const lines = decoder.decode(value).split('\n').filter(Boolean);
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop() || ''; // Keep the last partial line in buffer
+
       for (const line of lines) {
+        if (!line.trim()) continue;
         try {
           const data = JSON.parse(line);
           if (data.response) {
@@ -48,7 +53,9 @@ export async function callOllama(
             inputTokens = data.prompt_eval_count;
             outputTokens = data.eval_count || Math.ceil(fullResponse.length / 4);
           }
-        } catch {}
+        } catch (e) {
+          console.error('Ollama parse error:', e, line);
+        }
       }
     }
 
